@@ -37,8 +37,7 @@ public class EndlessActivity extends FlutterActivity {
 
     @Override
     public boolean shouldDestroyEngineWithHost() {
-        boolean isServiceActive = preferences.getBoolean(ConstantsOnlyForAndroid.PREF_IS_SERVICE_ACTIVE, ConstantsOnlyForAndroid.PREF_IS_NOT_SERVICE_ACTIVE);
-        return !isServiceActive;
+        return false;
     }
 
     private FlutterEngine setupFlutterEngine() {
